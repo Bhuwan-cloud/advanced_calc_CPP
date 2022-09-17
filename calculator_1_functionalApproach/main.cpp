@@ -105,11 +105,42 @@ void logarithimic()
     cout << log(value) << endl;
 }
 
+void MinMaxDiff(){
+
+    int value_1 = 0;
+    int value_2 = 0;
+    int op= 0;
+
+    cout << " [1] Minimum";
+    cout << " [2] Maximum";
+    cout << " [3] Difference";
+    cout << " Op : ";
+    cin >> op;
+
+    cout << "Enter the values to calculate either Min or Max or Diff: ";
+    cout << " Enter First value";
+    cin >> value_1;
+    cout << " Enter Second Value";
+    cin >> value_2;
+
+    if( op == 1){
+        cout << fmin(value_1, value_2);
+    }
+    else if( op = 2){
+        cout << fdim(value_1, value_2);
+    }
+    else if(op == 3){
+        cout << fmax(value_1, value_2);
+    }
+
+    cout << endl;
+
+
+}
+
 int main()
 {
-
     int sel = 0;
-
     char choice = 'y';
 
 src:
@@ -121,6 +152,7 @@ src:
     cout << "[2] Trigonometric \n";
     cout << "[3] Exponentialn \n";
     cout << "[4] Logarithmicn \n";
+    cout << "[5] MinMaxDiff \n";
     cout << "Your choice:" << endl;
 
     while (choice == 'y')
@@ -142,6 +174,9 @@ src:
             break;
         case 4:
             logarithimic();
+            break;
+        case 5:
+            MinMaxDiff();
             break;
         default:
             cout << " Invalid Operation" << endl;
